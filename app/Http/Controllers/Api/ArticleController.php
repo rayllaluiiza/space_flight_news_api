@@ -12,7 +12,7 @@ class ArticleController extends Controller
 
     public function welcome()
     {
-        return response()->json("Back-end Challenge 2021 - Space Flight News", 200);
+        return response()->json(['message' => 'Back-end Challenge 2021 - Space Flight News'], 200);
     }
     /**
      * Display a listing of the resource.
@@ -91,7 +91,7 @@ class ArticleController extends Controller
             return response()->json(['message' => 'Artigo não encontrado!'], 404);
         }
 
-        $article->destroy();
+        $article->delete();
         return response()->noContent();
     }
 }
