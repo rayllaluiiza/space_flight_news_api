@@ -16,6 +16,23 @@ git clone https://github.com/rayllaluiiza/space_flight_news_api.git
 cd space_flight_news_api
 ```
 
+<h3>Gerar o arquivo .env</h3>
+
+```
+cp .env.example .env
+```
+
+<h3>Alterar as variáveis do banco de dados</h3>
+
+```
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=space_flight_news_api
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+
 <h3>Executar os containers</h3>
 
 ```
@@ -32,23 +49,6 @@ docker-compose exec app bash
 
 ```
 composer install
-```
-
-<h3>Gerar o arquivo .env</h3>
-
-```
-cp .env.example .env
-```
-
-<h3>Alterar as variáveis do banco de dados</h3>
-
-```
-DB_CONNECTION=mysql
-DB_HOST=mysql
-DB_PORT=3306
-DB_DATABASE=space_flight_news_api
-DB_USERNAME=root
-DB_PASSWORD=root
 ```
 
 <h3>Gerar a chave do projeto</h3>
