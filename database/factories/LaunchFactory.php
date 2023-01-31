@@ -1,14 +1,22 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+namespace Database\Factories;
 
 use App\Article;
-use App\Launch;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-$factory->define(Launch::class, function (Faker $faker) {
-    return [
-        'provider' => $faker->text(20),
-        'articleId' => $faker->randomElement(Article::pluck('id'))
-    ];
-});
+class LaunchFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'provider' => $this->faker->text(20),
+            'articleId' => $this->faker->randomElement(Article::pluck('id'))
+        ];
+    }
+}

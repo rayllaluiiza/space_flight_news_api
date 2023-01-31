@@ -1,22 +1,29 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+namespace Database\Factories;
 
-use App\Article;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-$factory->define(Article::class, function (Faker $faker) {
+class ArticleFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        $title = $this->faker->sentence(3);
 
-    $title = $faker->sentence(3);
-
-    return [
-        'featured' => $faker->boolean,
-        'title' => $title,
-        'url' => Str::slug($title),
-        'imageUrl' => Str::slug($title),
-        'newsSite' => $faker->sentence(4),
-        'summary' => $faker->text(100),
-        'publishedAt' => $faker->dateTime()
-    ];
-});
+        return [
+            'featured' => $this->faker->boolean,
+            'title' => $title,
+            'url' => Str::slug($title),
+            'imageUrl' => Str::slug($title),
+            'newsSite' => $this->faker->sentence(4),
+            'summary' => $this->faker->text(100),
+            'publishedAt' => $this->faker->dateTime()
+        ];
+    }
+}
