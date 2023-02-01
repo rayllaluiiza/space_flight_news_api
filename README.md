@@ -2,8 +2,6 @@
 
 <p>Este projeto é um desafio para verificar minhas habilidades como desenvolvedora back-end. Foi desenvolvido uma REST API utilizando os dados do projeto Space Flight News, uma API pública com informações relacionadas a voos espaciais. O projeto teve como objetivo criar a API permitindo assim a conexão de outras aplicações.</p>
 
-<a href="https://www.loom.com/embed/cf849fe7501b418a8dd1ec22155e693a">Link da apresentação.</a>
-
 <h2>💡 Como executar o projeto</h2>
 
 <h3>Clonar o repositório</h3>
